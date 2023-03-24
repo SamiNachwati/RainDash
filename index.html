@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        SA0001: I Sami Nachwati, 000879289 certify that this material is 
+        my original work. No other person's work has been used without due 
+        acknowledgement. I have not made my work available to anyone else.
+        Author: Sami Nachwati
+        Student ID: 000879289
+        File: index.html
+        description: The webpage of the game mechanics, containing the svg elements and other elements 
+    -->
+    <title>Rain Dash</title>
+    <link href="game_styling.css" rel="stylesheet">
+    <script src="game_mechanics.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <audio id="thunder">
+        <source src="recording/thunder.wav" type="audio/wav">
+    </audio>
+    <audio id="strike">
+        <source src="recording/strike.wav" type="audio/wav">
+    </audio>
+    <header>
+        <img src="./img/rainDash.png" alt="game logo">
+        <h2>
+            Rain Dash
+        </h2>
+        <h2>
+            Sami Nachwati
+            <br>
+            000879289
+        </h2>
+    </header>
+    <main>
+        <div id="options">
+            <div>
+                <label class="text-headings">
+                    Time of day (morning, evening, or nighttime?)
+                </label>
+                <br>
+                <input id="time_of_day">
+                <button id="set_time" class="btn btn-primary">
+                    Set
+                </button>
+            </div>
+            <div>    
+                <p class="text-headings">Game Audio:</p>
+                <audio controls loop>
+                    <source src="recording/music.wav" type="audio/wav">
+                </audio>
+            </div>
+            <div>
+                <p class="text-headings">Level of Difficulty (Select Option When You Click READY):</p>
+                <button id="easy" class="btn btn-success">Easy</button>
+                <button id="medium" class="btn btn-warning">Medium</button>
+                <button id="impossible" class="btn btn-danger">Impossible</button>
+            </div>
+            <div>    
+                <p class="text-headings">
+                    How to Play:
+                </p>
+                <p>
+                    Avoid raindrops from the sky (Warning, there is random lighting/thunder sounds!)
+                </p>
+            </div>
+            <div>
+                <p class="text-headings">
+                    Controls:
+                </p>
+                <p> 
+                    <span>a</span> / <span>left arrow</span> to move left.
+                    <br>
+                    <br> 
+                    <span>d</span> / <span>right arrow</span> to move right.
+                </p>
+            </div>
+            <div>
+                <p class="text-headings">
+                    Press the ready button to play!
+                </p>
+                <button id="ready" class="btn btn-info">
+                    READY
+                </button>
+            </div>
+        </div>
+        <svg id="my-svg" height="800" width="1920">
+            <rect id="sky" height="100" width="1920"/>
+            <circle id="wheel" class="person" cx="200" cy="765" r="30"/>
+            <circle id="inner-wheel" class="person" cx="200" cy="765" r="10"/>        
+            <line id="body1" class="person bob-line" x1="200" y1="635" x2="200" y2="760" />
+            
+            <line id="screen" class="person" x1="200" y1="645" x2="200" y2="710"/>
+
+
+            <text id="first-txt" class="person txt" x="175" y="678">Score</text>
+            <text id="second-txt" class="person txt score" x="175" y="698">0</text>
+            <polygon id="lightning" points="200,100 400,600, 600,800 320,185" fill="#FFFF00"/>
+        </svg>
+
+        <div class="ground">
+        </div>
+        <div id="road">
+        </div>
+        <div class="ground">
+        </div>
+    </main>
+
+    <footer>
+        <p id="game_name">
+            RainDash
+        </p>
+
+        <p id="year">
+            &copy; 2023
+        </p>
+
+        <img id="game_icon" src="./img/rainDash.png" alt="game name">
+
+        <p id="name">
+            Sami Nachwati
+        </p>
+
+        <p id="student-number">
+            000879289
+        </p>
+    </footer>
+</body>
+</html>

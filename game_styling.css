@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+/*
+  SA0001: I Sami Nachwati, 000879289 certify that this material is 
+  my original work. No other person's work has been used without due 
+  acknowledgement. I have not made my work available to anyone else.
+  Author: Sami Nachwati
+  Student ID: 000879289
+  File: game_styling.css
+  description: the styling of the game's webpage. 
+*/
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header img{
+    width: 200px;
+}
+
+header{
+    background-color: darkblue; 
+    color: Cyan;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#options{
+  background: #000034;
+  color: palegoldenrod;
+  display: grid;
+  grid-template-columns: 5fr 5fr 5fr;
+  justify-items: stretch;
+  text-align: center;
+  gap: 20px;
+}
+
+#options span {
+  border: 3px solid white;
+  font-family: cursive;
+  color: black;
+  background: darkorange;
+}
+
+.text-headings{
+  color: coral;
+  font-weight: 600;
+}
+
+
+#my-svg{
+    background: cyan;
+}
+
+.ground{
+    background-color: darkgrey;
+    height: 40px;
+    width: auto;
+}
+
+#road{
+  background-color: darkgrey;
+  border-top: 5px yellow dashed;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    object-fit: contain;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    justify-content: center;
+    background: darkblue;
+    color: cyan;
+    font-weight: bold;
+    padding: 25px 0 25px 0;
+}
+
+#game_name{
+    margin-left: 10px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+#year{
+    margin-right: 10px;
+    grid-column: 5;
+    grid-row: 1;
+}
+
+#name{
+    margin-left: 10px;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#student-number{
+    margin-right: 10px;
+    grid-column: 4;
+    grid-row: 2;
+}
+footer img{
+    width: 100px;
+    grid-column: 3;
+    justify-self: center;
+}
+
+footer p{
+    border-bottom: 1px solid cyan;
+}
+
+
+#wheel{
+  fill: white;
+  stroke: black;
+  stroke-width: 10px;
+}
+
+#screen {
+  stroke: black;
+  stroke-width: 60px;
+}
+
+#body1 {
+stroke: red;
+stroke-width: 80px;
+}
+
+#sky{
+  fill: grey;
+}
+
+
+.txt{
+  font-size: 13px;
+  font-family: monospace;
+  fill: lightgreen;
+}
+
+.raindrops{
+  fill: blue;
+}
+
+@media (max-width: 320px){
+  header{
+    flex-flow: column wrap;
+    text-align: center;
+  }
+  footer{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  #game_name{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+
+  #year{
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #name{
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #student-number{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  footer img{
+    width: 100px;
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+
+  footer p{
+    border-bottom: none;
+  }
+  #ready, #easy, #medium, #impossible, #set_time{
+    font-size: 10px;
+    display: flex;
+  }
+  #options{
+    text-align: center;
+  }
+}
+
+
+@media (max-width:500px){
+  #options{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    font-size: 10px;
+  }
+  audio{
+    width: 50%;
+  }
+}
