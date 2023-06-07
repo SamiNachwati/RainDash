@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*
-  Author: Sami Nachwati
+  Developer: Sami Nachwati
   File: game_styling.css
   description: the styling of the game's webpage. 
 */
@@ -10,105 +10,115 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-header img{
-    width: 200px;
+header img, footer img{
+    width: 130px;
 }
 
 header{
-    background-color: darkblue; 
-    color: Cyan;
-    font-weight: bold;
+    color: cyan;
     display: flex;
     justify-content: space-around;
+    padding: 20px;
+    margin-bottom: 20px;
     align-items: center;
 }
 
-
-#options{
+main, body#bd {
   background: #000034;
-  color: palegoldenrod;
+}
+
+#svgContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#options {
   display: grid;
   grid-template-columns: 5fr 5fr 5fr;
   justify-items: stretch;
   text-align: center;
   gap: 20px;
+  margin: 20px;
+}
+
+
+#options input {
+  padding: 2px 20px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid black;
+  font-size: 25px;
+}
+
+#set_time {
+  width: 30%;
 }
 
 #options span {
-  border: 3px solid white;
-  font-family: cursive;
-  color: black;
-  background: darkorange;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
 }
 
-.text-headings{
-  color: coral;
-  font-weight: 600;
+#options .buttons 
+{
+  width: 60px;
 }
 
+#options div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px
+}
+
+#options h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#options h3 img{
+  width: 60px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+.text-headings, #options div{
+  background-color: cyan;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
 
 #my-svg{
-    background: cyan;
+  background: cyan;
+  margin-top: 2em;
 }
 
-.ground{
-    background-color: darkgrey;
-    height: 40px;
-    width: auto;
-}
-
-#road{
-  background-color: darkgrey;
-  border-top: 5px yellow dashed;
-}
 
 footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    object-fit: contain;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 20px;
-    justify-content: center;
-    background: darkblue;
-    color: cyan;
-    font-weight: bold;
-    padding: 25px 0 25px 0;
-}
-
-#game_name{
-    margin-left: 10px;
-    grid-column: 1;
-    grid-row: 1;
-}
-
-
-#year{
-    margin-right: 10px;
-    grid-column: 5;
-    grid-row: 1;
-}
-
-#name{
-    margin-left: 10px;
-    grid-column: 2;
-    grid-row: 2;
-}
-
-#rights-message{
-    margin-right: 10px;
-    grid-column: 4;
-    grid-row: 2;
-}
-footer img{
-    width: 100px;
-    grid-column: 3;
-    justify-self: center;
+  background: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px;
+  align-items: center;
+  margin-top: 50px;
+  color: cyan;
+  border-top: 2px solid cyan;
 }
 
 footer p{
     border-bottom: 1px solid cyan;
+}
+
+main div#options div {
+  word-wrap: break-word;
 }
 
 
@@ -133,6 +143,11 @@ stroke-width: 80px;
 }
 
 
+#lightning {
+  display: none;
+}
+
+
 .txt{
   font-size: 13px;
   font-family: monospace;
@@ -143,43 +158,18 @@ stroke-width: 80px;
   fill: blue;
 }
 
-@media (max-width: 320px){
+#play-again  {
+  display: none;
+  justify-content: center;
+  align-items: end;  
+}
+
+
+@media (max-width:1260px){
   header{
     flex-flow: column wrap;
     text-align: center;
   }
-  footer{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-  #game_name{
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-
-  #year{
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  #name{
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  #rights-message{
-    grid-column: 2;
-    grid-row: 2;
-  }
-  footer img{
-    width: 100px;
-    grid-column: 1 / span 2;
-    grid-row: 3;
-  }
-
   footer p{
     border-bottom: none;
   }
@@ -190,15 +180,15 @@ stroke-width: 80px;
   #options{
     text-align: center;
   }
-}
-
-
-@media (max-width:500px){
   #options{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     font-size: 10px;
+  }
+  #options h3 {
+    display: grid;
+    place-items: center;
   }
   audio{
     width: 50%;
